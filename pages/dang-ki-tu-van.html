@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BAC - Đăng ký tư vấn</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Be Vietnam Pro',Arial,sans-serif;background:#071b34;color:#fff;min-height:100vh}
+    .page{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:42px 22px;overflow:hidden}
+    .bg{position:absolute;inset:0;background:url('../assets/images/banner_city.jpg') center/cover no-repeat;opacity:.48}
+    .overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(6,50,95,.96),rgba(13,75,134,.78),rgba(7,27,52,.72))}
+    .glow{position:absolute;inset:0;background:radial-gradient(circle at 18% 18%,rgba(0,128,255,.36),transparent 33%),radial-gradient(circle at 78% 25%,rgba(255,255,255,.18),transparent 30%)}
+    .wrap{position:relative;z-index:2;width:100%;max-width:1180px;display:grid;grid-template-columns:.95fr 1.05fr;gap:34px;align-items:center}
+    .left{animation:fadeUp .7s ease both}.right{animation:fadeUp .8s .1s ease both}
+    .back{display:inline-flex;align-items:center;gap:10px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.12);color:#fff;border-radius:999px;padding:13px 20px;font-size:14px;font-weight:800;text-decoration:none;backdrop-filter:blur(12px);transition:.25s}.back:hover{background:rgba(255,255,255,.2);transform:translateY(-2px)}
+    .badge{display:inline-flex;align-items:center;gap:9px;margin-top:30px;border:1px solid rgba(121,184,255,.28);background:rgba(14,123,255,.22);color:#dceeff;border-radius:999px;padding:10px 16px;font-size:14px;font-weight:900}
+    h1{margin-top:20px;font-size:clamp(42px,5vw,68px);line-height:1.05;font-weight:900;letter-spacing:-.04em}.blue{color:#86c8ff}.desc{margin-top:22px;max-width:610px;font-size:18px;line-height:1.85;color:rgba(255,255,255,.84);font-weight:500}
+    .features{margin-top:32px;display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:650px}.feature{min-height:116px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.11);border-radius:26px;padding:20px;backdrop-filter:blur(16px);box-shadow:0 24px 60px rgba(0,0,0,.16)}.feature svg{margin-bottom:12px}.feature p{font-size:14px;font-weight:900;line-height:1.45;color:rgba(255,255,255,.92)}
+    .card{background:#fff;border-radius:36px;padding:18px;box-shadow:0 34px 110px rgba(0,0,0,.38)}.form-box{border:1px solid #cde5ff;border-radius:30px;background:linear-gradient(135deg,#f8fcff,#eaf4ff);padding:34px;color:#0b2746}.eyebrow{font-size:13px;font-weight:900;letter-spacing:.22em;text-transform:uppercase;color:#0878e8}.form-box h2{margin-top:10px;font-size:34px;font-weight:900;letter-spacing:-.035em}.hint{margin-top:12px;color:#52708e;line-height:1.65;font-weight:500}
+    form{margin-top:26px}.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}.field{display:block;margin-bottom:16px}.field span.label{display:block;margin-bottom:9px;font-size:14px;font-weight:900;color:#14385d}.control{display:flex;align-items:center;gap:12px;border:1px solid #cce0f5;background:#fff;border-radius:18px;padding:14px 15px;transition:.2s}.control:focus-within{border-color:#0878e8;box-shadow:0 0 0 4px rgba(8,120,232,.1)}.icon{color:#0878e8;line-height:0}input,select,textarea{width:100%;border:0;outline:0;background:transparent;font-family:inherit;font-size:14px;color:#14385d}input::placeholder,textarea::placeholder{color:#9bafc2}select{height:50px;border:1px solid #cce0f5;background:#fff;border-radius:18px;padding:0 15px;color:#14385d}textarea{resize:none;border:1px solid #cce0f5;background:#fff;border-radius:18px;padding:15px;line-height:1.6;min-height:118px;transition:.2s}textarea:focus{border-color:#0878e8;box-shadow:0 0 0 4px rgba(8,120,232,.1)}
+    .submit{margin-top:4px;width:100%;border:0;border-radius:20px;background:#0078f5;color:#fff;font-size:16px;font-weight:900;padding:17px 24px;display:flex;align-items:center;justify-content:center;gap:12px;box-shadow:0 18px 35px rgba(8,120,232,.25);cursor:pointer;transition:.25s}.submit:hover{background:#006adc;transform:translateY(-2px)}.note{text-align:center;margin-top:16px;font-size:12px;line-height:1.7;color:#6b8299}
+    .success-msg{display:none;margin-top:18px;background:#e6f4ea;border:1px solid #a8d5b0;border-radius:16px;padding:18px 22px;color:#1a6630;font-size:14px;font-weight:700;text-align:center}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
+    @media(max-width:960px){.wrap{grid-template-columns:1fr}.features{grid-template-columns:1fr 1fr}.left{text-align:left}.card{max-width:720px;width:100%;margin:auto}}
+    @media(max-width:560px){.page{padding:24px 14px}.features,.grid2{grid-template-columns:1fr}.form-box{padding:24px 18px}.card{border-radius:28px;padding:10px}.form-box{border-radius:24px}h1{font-size:40px}.desc{font-size:16px}.badge{margin-top:22px}}
+  </style>
+</head>
+<body>
+  <main class="page">
+    <div class="bg"></div><div class="overlay"></div><div class="glow"></div>
+    <section class="wrap">
+      <div class="left">
+        <a href="../index.html" class="back">← Quay lại trang chủ</a>
+        <div class="badge">✦ Đăng ký tư vấn cùng BAC</div>
+        <h1>Bắt đầu hành trình<br><span class="blue">tăng trưởng số</span></h1>
+        <p class="desc">BAC đồng hành cùng doanh nghiệp nhỏ và vừa, hợp tác xã và hộ kinh doanh trong chuyển đổi số, phát triển bền vững và nâng cao năng lực cạnh tranh.</p>
+        <div class="features">
+          <div class="feature">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#9BD1FF" stroke-width="2.4"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg>
+            <p>Tư vấn đúng nhu cầu</p>
+          </div>
+          <div class="feature">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#9BD1FF" stroke-width="2.4"><path d="M3 21h18"/><path d="M5 21V7l8-4v18"/><path d="M19 21V11l-6-4"/><path d="M9 9h1M9 13h1M9 17h1"/></svg>
+            <p>Giải pháp cho SME</p>
+          </div>
+          <div class="feature">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#9BD1FF" stroke-width="2.4"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>
+            <p>Kết nối nhanh chóng</p>
+          </div>
+        </div>
+      </div>
+      <div class="right">
+        <div class="card">
+          <div class="form-box">
+            <p class="eyebrow">Form tư vấn</p>
+            <h2>Thông tin đăng ký</h2>
+            <p class="hint">Điền thông tin bên dưới, đội ngũ BAC sẽ liên hệ lại để tư vấn lộ trình phù hợp.</p>
+            <form id="tuvanForm" novalidate>
+              <div class="grid2">
+                <label class="field">
+                  <span class="label">Họ và tên</span>
+                  <div class="control"><span class="icon">👤</span><input type="text" name="hoten" placeholder="Nguyễn Văn A" required /></div>
+                </label>
+                <label class="field">
+                  <span class="label">Số điện thoại</span>
+                  <div class="control"><span class="icon">☎</span><input type="tel" name="dienthoai" placeholder="09xx xxx xxx" required /></div>
+                </label>
+              </div>
+              <label class="field">
+                <span class="label">Email</span>
+                <div class="control"><span class="icon">✉</span><input type="email" name="email" placeholder="email@doanhnghiep.vn" required /></div>
+              </label>
+              <label class="field">
+                <span class="label">Tên doanh nghiệp / đơn vị</span>
+                <div class="control"><span class="icon">🏢</span><input type="text" name="doanhnghiep" placeholder="Công ty, hợp tác xã, hộ kinh doanh..." /></div>
+              </label>
+              <div class="grid2">
+                <label class="field">
+                  <span class="label">Nhu cầu tư vấn</span>
+                  <select name="nhucau">
+                    <option>Chuyển đổi số</option>
+                    <option>Xây dựng thương hiệu</option>
+                    <option>Quản trị doanh nghiệp</option>
+                    <option>Phát triển bền vững</option>
+                    <option>Hỗ trợ pháp lý</option>
+                    <option>Tiếp cận nguồn vốn</option>
+                  </select>
+                </label>
+                <label class="field">
+                  <span class="label">Khu vực</span>
+                  <div class="control"><span class="icon">📍</span><input type="text" name="khuvuc" placeholder="Hà Nội, Hải Phòng..." /></div>
+                </label>
+              </div>
+              <label class="field">
+                <span class="label">Nội dung cần tư vấn</span>
+                <textarea name="noidung" placeholder="Mô tả ngắn vấn đề hoặc mục tiêu doanh nghiệp của bạn..."></textarea>
+              </label>
+              <button class="submit" type="submit">Gửi đăng ký tư vấn →</button>
+              <div class="success-msg" id="successMsg">✔ Đăng ký thành công! Đội ngũ BAC sẽ liên hệ với bạn trong thời gian sớm nhất.</div>
+              <p class="note">Bằng việc gửi thông tin, bạn đồng ý để BAC liên hệ tư vấn theo nhu cầu đã đăng ký.</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script>
+    const form = document.getElementById('tuvanForm');
+    const successMsg = document.getElementById('successMsg');
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const hoten = form.hoten.value.trim();
+      const dienthoai = form.dienthoai.value.trim();
+      const email = form.email.value.trim();
+      if (!hoten || !dienthoai || !email) {
+        alert('Vui lòng điền đầy đủ họ tên, số điện thoại và email.');
+        return;
+      }
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        alert('Vui lòng nhập email hợp lệ.');
+        return;
+      }
+      form.querySelector('.submit').style.display = 'none';
+      successMsg.style.display = 'block';
+      form.reset();
+    });
+  </script>
+</body>
+</html>

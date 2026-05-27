@@ -52,6 +52,8 @@ project/
 
 ### Trang HTML
 - `index.html` — Trang chủ. Chứa hero, dịch vụ, tin tức, dữ liệu số, đối tác. Style từ `css/style.css` + `css/responsive.css`. Khi sửa menu navigation chính cần đồng bộ với `pages/gioi-thieu.html`.
+- `pages/dich-vu-phat-trien.html` — Trang Dịch vụ & phát triển. Mở khi click "Xem Dịch vụ" ở hero `index.html` hoặc "Dịch vụ & phát triển" ở menu. Layout 2 cột: main (intro, info-grid, steps, benefits, CTA, related) + sidebar (danh mục, liên hệ, tài liệu). Style Inter font, inline trong file.
+- `pages/dang-ki-tu-van.html` — Trang Đăng ký tư vấn. Hiển thị khi click nút "Đăng ký Tư vấn" ở hero `index.html`. Gồm layout 2 cột: trái (tiêu đề + feature cards), phải (form đăng ký). Style inline trong file. Có JS validate và thông báo thành công.
 - `pages/gioi-thieu.html` — Trang Giới thiệu. Gồm topbar, header, hero/breadcrumb, tabs (Tổng quan/Cơ cấu/Lịch sử), 3 card thông tin (Tổng quan, Chức năng nhiệm vụ, Pháp lý), timeline lịch sử phát triển, footer. Style từ `css/gioi-thieu.css`. Mở khi click "Giới thiệu" ở menu `index.html`.
 
 ### CSS
