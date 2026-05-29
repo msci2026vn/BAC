@@ -94,8 +94,8 @@ footer{height:auto;min-height:150px;grid-template-columns:1.25fr .8fr .9fr 1.25f
 .chat-head{user-select:none}
 .chat-head button{width:24px;height:24px;border-radius:4px;cursor:pointer}
 .chat-avatar{display:none;width:58px;height:58px;border:3px solid #fff;border-radius:50%;background:linear-gradient(145deg,#0b73d9,#003a78);box-shadow:0 12px 26px rgba(0,21,60,.28);color:#fff;font-weight:800;cursor:pointer}
-.chat-avatar:before{content:"";position:absolute;left:18px;top:12px;width:16px;height:16px;border-radius:50%;background:#dcecff}
-.chat-avatar:after{content:"";position:absolute;left:12px;bottom:10px;width:28px;height:18px;border-radius:18px 18px 10px 10px;background:#dcecff}
+.chat-avatar:before,.chat-avatar:after{display:none}
+.chat-avatar{display:none;width:58px;height:58px;border:3px solid #fff;border-radius:50%;background:linear-gradient(145deg,#0b73d9,#003a78);box-shadow:0 12px 26px rgba(0,21,60,.28);cursor:pointer;align-items:center;justify-content:center}
 .chat.is-minimized{width:58px !important;height:58px !important;min-width:58px;min-height:58px;resize:none;overflow:visible;border-radius:50%;background:transparent;box-shadow:none}
 .chat.is-minimized .chat-head,.chat.is-minimized .chat-body{display:none}
 .chat.is-minimized .chat-avatar{display:block;position:relative}
@@ -117,5 +117,48 @@ footer{height:auto;min-height:150px;grid-template-columns:1.25fr .8fr .9fr 1.25f
 .dashboard>section{display:flex;flex-direction:column;min-width:0}
 .dashboard .card,.dashboard .chart-card{flex:1}
 .services,.news-card,.chart-card{min-height:240px}
-.data-grid{grid-template-columns:1fr;gap:8px}
+.data-grid{grid-template-columns:repeat(3,1fr);gap:8px}
 .data-card{min-height:68px}
+/* ── Chart Tăng trưởng redesign ── */
+.chart-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
+.chart-card h3{text-align:left;font-size:14px;font-weight:800;color:#062a70;margin-bottom:0}
+.chart-card>p{display:none}
+.chart-legend{display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+.chart-legend span{font-size:11px;font-weight:600;color:#3a4665;display:flex;align-items:center;gap:5px;line-height:1}
+.chart-legend span::before{content:"";display:inline-block;width:10px;height:10px;border-radius:2px;flex-shrink:0}
+.leg-dn::before{background:linear-gradient(135deg,#3080e8,#1548a0)}
+.leg-htx::before{background:linear-gradient(135deg,#0f5dbd,#032260)}
+.leg-hkd::before{background:linear-gradient(135deg,#80c0f8,#4089cc)}
+.chart-card .bars{height:180px;padding:0 6px 0 40px;gap:22px;background:repeating-linear-gradient(to bottom,transparent,transparent 43px,#ecf2fb 43px,#ecf2fb 44px);border-bottom:1px solid #c8d6ed}
+.chart-card .axis{font-size:10px;color:#8a9bb8;line-height:44px;top:0;left:0}
+.chart-card .month{height:176px;gap:6px}
+.chart-card .month i{width:15px;border-radius:3px 3px 0 0;transition:filter .15s;background:linear-gradient(to top,#1548a0,#3080e8)}
+.chart-card .month i:nth-child(2){background:linear-gradient(to top,#032260,#0a4cae)}
+.chart-card .month i:nth-child(3){background:linear-gradient(to top,#4089cc,#80c0f8)}
+.chart-card .month i:hover{filter:brightness(1.2)}
+.chart-card .b26{height:70px}.chart-card .b28{height:76px}.chart-card .b30{height:81px}.chart-card .b31{height:84px}.chart-card .b32{height:86px}.chart-card .b34{height:92px}.chart-card .b35{height:95px}.chart-card .b37{height:100px}.chart-card .b39{height:105px}.chart-card .b40{height:108px}.chart-card .b41{height:111px}.chart-card .b44{height:119px}.chart-card .b47{height:127px}.chart-card .b48{height:130px}.chart-card .b51{height:138px}.chart-card .b53{height:143px}.chart-card .b55{height:149px}.chart-card .b56{height:151px}
+.chart-card .labels{margin-left:40px;margin-top:8px;display:flex;justify-content:space-between;gap:0;font-size:10px;color:#62708a}
+/* ── Partner marquee ── */
+.partner-logos{display:block;position:relative;overflow:hidden}
+.partner-logos::before,.partner-logos::after{content:"";position:absolute;top:0;bottom:0;width:56px;z-index:2;pointer-events:none}
+.partner-logos::before{left:0;background:linear-gradient(to right,#fff 40%,transparent)}
+.partner-logos::after{right:0;background:linear-gradient(to left,#fff 40%,transparent)}
+.partner-track{display:flex;width:max-content;animation:partner-scroll 26s linear infinite}
+.partner-track:hover{animation-play-state:paused}
+.partner-track span{padding:0 28px;border-right:1px solid #e4eaf3;height:36px;display:inline-flex;align-items:center;justify-content:center;font-weight:800;color:#0b347d;font-size:17px;white-space:nowrap;flex-shrink:0;line-height:1.25;transition:color .2s}
+.partner-track span:hover{color:#0869d7}
+.partner-track .lg-sm{font-size:11px;text-align:center;min-width:90px}
+@keyframes partner-scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+/* ── Services redesign ── */
+.card.services{background:transparent;border:none;box-shadow:none;padding:0;display:flex;flex-direction:column;gap:9px}
+.card.services .service{flex:1;margin:0;padding:16px 16px 14px;background:#fff;border:1px solid #dde8f6;border-bottom:1px solid #dde8f6;border-radius:10px;box-shadow:0 2px 10px rgba(4,28,80,.07);transition:transform .2s ease,box-shadow .2s ease;align-items:center;gap:14px}
+.card.services .service:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(4,28,80,.14)}
+.card.services .service>span{width:46px;height:46px;border-radius:11px;display:flex;align-items:center;justify-content:center;font-size:21px;color:#fff;flex-shrink:0;line-height:1}
+.card.services .service:nth-child(1)>span{background:linear-gradient(135deg,#3586f5,#1045b8)}
+.card.services .service:nth-child(2)>span{background:linear-gradient(135deg,#0ac482,#027a52)}
+.card.services .service:nth-child(3)>span{background:linear-gradient(135deg,#f59620,#c25e00)}
+.card.services .service div{display:flex;flex-direction:column;flex:1;justify-content:center;min-height:0}
+.card.services .service h3{font-size:13px;color:#052a6e;margin-bottom:5px;font-weight:700}
+.card.services .service p{font-size:11px;line-height:1.65;color:#3d5282;margin-bottom:0}
+.card.services .service a{margin-top:8px;font-size:11px;font-weight:700;align-self:flex-start}
+.card.services .service>span img{width:26px;height:26px;object-fit:contain;display:block;filter:brightness(0) invert(1)}
