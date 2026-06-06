@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="vi">
 <head>
 <meta charset="UTF-8" />
@@ -8,22 +8,569 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--blue:#003b86;--deep:#002a69;--primary:#0656d9;--light:#f5f8fd;--text:#10245b;--muted:#5d6a86;--line:#dce7f7;--footer:#002e72}*{box-sizing:border-box}body{margin:0;font-family:"Be Vietnam Pro",Arial,sans-serif;background:#f4f7fb;color:var(--text);font-size:14px}.page{width:100%;min-height:729px;margin:0 auto;background:#f6f9fd}.topbar{height:34px;background:#002d72;color:#fff;display:flex;align-items:center;justify-content:space-between;padding:0 42px;font-size:14px}.topbar .right{display:flex;gap:18px;align-items:center}.social{width:18px;height:18px;border-radius:50%;display:inline-grid;place-items:center;font-size:10px;font-weight:700;color:#fff}.fb{background:#087df4}.ms{background:#15a9ff}.yt{background:#e92525}.navbar{height:68px;background:#fff;display:flex;align-items:center;padding:0 50px;border-bottom:1px solid #e6edf7;box-shadow:0 3px 12px rgba(11,39,82,.08);gap:18px}.brand{flex:0 0 248px;width:260px;display:flex;align-items:center;color:inherit;text-decoration:none}.brand img{display:block;width:238px;height:auto}.menu{flex:1;display:flex;align-items:center;justify-content:space-between;gap:24px;font-weight:700;color:#071a55;font-size:14px}.menu a{min-height:68px;display:flex;align-items:center;text-decoration:none;color:#071a55;position:relative;text-align:center;line-height:1.25}.menu .active{color:#0b61df}.menu .active:after{content:"";height:3px;background:#0d68ff;left:0;right:0;bottom:13px;position:absolute;border-radius:10px}.search-box{flex:0 0 176px;height:38px;display:flex;align-items:center;gap:8px;padding:0 12px;border:1px solid #dce5f2;border-radius:20px;background:#f8fbff}.search-box span{color:#07265e;font-size:22px;line-height:1}.search-box input{min-width:0;width:100%;border:0;outline:0;background:transparent;color:#071b47;font-size:12px}.hero{min-height:206px;background:linear-gradient(90deg,rgba(0,42,109,.98) 0%,rgba(0,60,142,.92) 50%,rgba(1,79,174,.70) 100%),url('../assets/images/banner_city.jpg') center/cover no-repeat;color:#fff;position:relative;overflow:hidden;padding:28px 58px}.hero:after{content:"";position:absolute;right:90px;bottom:0;width:430px;height:145px;background:repeating-linear-gradient(90deg,rgba(255,255,255,.09) 0 1px,transparent 1px 45px),repeating-linear-gradient(0deg,rgba(255,255,255,.08) 0 1px,transparent 1px 34px);clip-path:polygon(0 55%,10% 50%,16% 20%,25% 55%,36% 30%,49% 58%,55% 0,68% 62%,80% 26%,90% 59%,100% 46%,100% 100%,0 100%)}.crumb{font-size:13px;opacity:.9;margin-bottom:8px;position:relative;z-index:1}.hero h1{font-size:29px;line-height:1.26;margin:0 0 14px;font-weight:800;letter-spacing:.2px;position:relative;z-index:1}.hero p{font-size:15px;line-height:1.68;margin:0;width:470px;position:relative;z-index:1;color:#e8f2ff}.main{width:calc(100% - 32px);margin:18px auto 0;display:grid;grid-template-columns:240px minmax(0,1fr) 270px;gap:18px}.card{background:#fff;border:1px solid #e4edf9;border-radius:3px;box-shadow:0 1px 7px rgba(0,42,105,.06)}.sideTitle{height:30px;background:#003d91;color:#fff;padding:8px 12px;font-weight:700}.category{padding:8px 10px 5px}.catRow,.typeRow{display:flex;align-items:center;min-height:28px;border-bottom:1px solid #edf2f8;color:#172b65}.catRow span:nth-child(1),.typeRow span:nth-child(1){width:24px;color:#1a5fd2}.catRow b,.typeRow b{flex:1;font-weight:600}.catRow em,.typeRow em{font-style:normal;color:#425272;font-size:10px}.boxTitle{font-size:13px;font-weight:800;margin:15px 10px 6px}.newsletterSmall{padding:0 10px 12px;color:#273b70}.newsletterSmall p{font-size:11px;line-height:1.5;margin:0 0 8px}.newsletterSmall input{width:100%;height:28px;border:1px solid #d8e2f1;padding:0 9px;font-size:10px}.newsletterSmall button{margin-top:8px;width:100%;height:28px;border:0;background:#004fc1;color:#fff;border-radius:3px;font-weight:700;font-size:11px}.contentTop{display:flex;height:32px;margin-bottom:10px}.searchInput{flex:1;border:1px solid #d8e4f3;background:#fff;padding:0 12px;font-size:11px;color:#7a8499}.select{width:132px;border:1px solid #d8e4f3;background:#fff;padding:0 11px;font-size:11px;display:flex;align-items:center;justify-content:space-between}.searchBtn{width:78px;border:0;background:#004fc1;color:#fff;font-weight:700;font-size:11px}.listMeta{font-size:11px;color:#263b78;margin:0 0 10px;display:flex;justify-content:space-between}.sort{display:flex;align-items:center;gap:7px}.sortBox{border:1px solid #d8e4f3;background:#fff;width:84px;height:24px;display:flex;align-items:center;justify-content:center}.featured{display:grid;grid-template-columns:280px 1fr;gap:18px;background:#fff;border-radius:3px;margin-bottom:16px;border:1px solid #e4edf9;padding:0 14px 0 0}.featImg{height:172px;background:linear-gradient(180deg,#1e2d44,#0d1a27);position:relative;overflow:hidden}.featImg:before{content:"DIỄN ĐÀN HỖ TRỢ DOANH NGHIỆP\A CHUYỂN ĐỔI SỐ VÀ ĐỔI MỚI SÁNG TẠO";white-space:pre;position:absolute;left:36px;top:28px;color:#fff;text-align:center;font-weight:800;font-size:12px;line-height:1.35}.stage{position:absolute;left:88px;right:50px;bottom:48px;height:34px;background:#0b54a7;border-radius:2px}.stage:after{content:"BAC";position:absolute;left:28px;top:8px;color:#fff;font-size:17px;font-weight:800}.people{position:absolute;left:0;right:0;bottom:0;height:54px;background:radial-gradient(circle at 12% 70%,#222 0 8px,transparent 9px),radial-gradient(circle at 25% 75%,#1b1b1b 0 8px,transparent 9px),radial-gradient(circle at 39% 76%,#222 0 8px,transparent 9px),radial-gradient(circle at 55% 74%,#222 0 8px,transparent 9px),radial-gradient(circle at 72% 76%,#222 0 8px,transparent 9px),linear-gradient(#58606b,#1c222b)}.speaker{position:absolute;right:55px;bottom:52px;width:18px;height:50px;background:#caa16b;border-radius:10px 10px 0 0}.featText{padding-top:14px}.badge{display:inline-block;background:#eef5ff;color:#004fc1;font-weight:700;font-size:10px;padding:5px 11px;border-radius:2px;margin-bottom:8px}.featText h2{font-size:20px;line-height:1.35;margin:0 0 10px;color:#002b78}.featText p{font-size:12px;line-height:1.65;margin:0 0 14px;color:#273760}.postInfo{font-size:11px;color:#60708e;display:flex;gap:25px}.gridNews{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.newsCard{background:#fff}.thumb{height:86px;border-radius:2px;position:relative;overflow:hidden;margin-bottom:8px}.video{background:linear-gradient(140deg,#1f5b94,#dbe5ed 48%,#2b3440)}.video:after{content:"▶";position:absolute;width:31px;height:31px;border-radius:50%;background:#fff;color:#0b55b9;left:50%;top:50%;transform:translate(-50%,-50%);display:grid;place-items:center;font-size:14px}.info{background:linear-gradient(135deg,#f5f8fd,#ffffff)}.info:before{content:"Infographic";position:absolute;top:0;left:0;background:#008b66;color:white;font-size:9px;font-weight:700;padding:4px 8px}.bars{background:linear-gradient(90deg,#f2f5fb,#ffffff)}.bars:before{content:"";position:absolute;left:38px;bottom:16px;width:80px;height:45px;background:linear-gradient(90deg,#8fc1ff 0 10px,transparent 10px 18px,#6aaeff 18px 28px,transparent 28px 36px,#3f92f2 36px 50px,transparent 50px 58px,#0f6de0 58px 74px);transform:skewY(-9deg)}.group{background:linear-gradient(180deg,#033e87,#0e6bd3)}.group:before{content:"Hình ảnh";position:absolute;top:0;left:0;background:#f2a100;color:white;font-size:9px;font-weight:700;padding:4px 8px}.newsCard h3{font-size:13px;line-height:1.45;margin:0 0 8px;color:#14326f}.miniMeta{font-size:10px;color:#61708b;display:flex;gap:14px}.rightPanel{padding:0 0 8px}.rpTitle{font-size:13px;font-weight:800;margin:0 0 7px}.rightInner{padding:10px}.hotItem{display:grid;grid-template-columns:58px 1fr;gap:8px;border-bottom:1px solid #edf2f8;padding:0 0 8px;margin-bottom:8px}.hotThumb{height:38px;background:linear-gradient(135deg,#054f9e,#d8e2ef);border-radius:2px}.hotItem h4{font-size:11px;line-height:1.35;margin:0 0 4px}.hotItem time{font-size:9px;color:#738095}.eventsHeader{display:flex;justify-content:space-between;align-items:center;margin:14px 0 8px}.eventsHeader a{font-size:10px;color:#004fc1;text-decoration:none;font-weight:700}.event{display:grid;grid-template-columns:33px 1fr;gap:8px;margin-bottom:12px}.cal{width:28px;height:28px;border:1px solid #cbdcfa;border-radius:50%;display:grid;place-items:center;color:#0b56d2}.event b{font-size:11px;line-height:1.3;display:block}.event span{font-size:9px;color:#758098}.footer{margin-top:18px;background:#002e72;color:#dce8ff}.footerTop{width:calc(100% - 32px);margin:0 auto;display:grid;grid-template-columns:1.3fr .8fr .95fr 1.25fr 1.55fr;gap:28px;padding-top:17px;padding-bottom:12px}.fcol h4{margin:0 0 8px;font-size:12px;color:#fff}.fcol p,.fcol li{font-size:10.5px;line-height:1.65;margin:0;color:#d6e2fb}.fcol ul{list-style:none;padding:0;margin:0}.fSocial{display:flex;gap:13px;margin-top:9px}.fSocial span{width:15px;height:15px;border-radius:50%;display:grid;place-items:center;color:white;font-size:8px}.subForm{display:flex;margin-top:9px}.subForm input{height:30px;width:170px;border:0;padding:0 12px;font-size:11px}.subForm button{height:30px;width:68px;border:0;background:#0052c7;color:#fff;font-weight:700;font-size:11px}.bottom{min-height:33px;border-top:1px solid rgba(255,255,255,.12);display:flex;align-items:center;justify-content:center;gap:70px;font-size:10.5px;color:#d4e2ff;padding:0 58px}@media(max-width:1100px){.main{width:calc(100% - 24px);grid-template-columns:1fr}.gridNews{grid-template-columns:1fr 1fr}.footerTop{width:calc(100% - 24px);grid-template-columns:1fr 1fr}.menu{gap:16px;font-size:12px}.topbar,.navbar{padding-left:28px;padding-right:28px}.hero{padding-left:36px}.featured{grid-template-columns:1fr}.featImg{height:190px}.featured{padding-right:0}.featText{padding:14px}}@media(max-width:680px){.topbar{height:auto;min-height:34px;padding:8px 18px;gap:10px;flex-wrap:wrap}.topbar .right{gap:10px;flex-wrap:wrap}.navbar{height:auto;min-height:68px;flex-wrap:wrap;padding:10px 18px}.brand{width:auto;flex:1}.brand img{width:190px}.menu{order:4;width:100%;display:grid;grid-template-columns:1fr;align-items:stretch}.menu a{min-height:0;padding:10px 0}.search-box{order:3;flex:1 1 100%}.hero p{width:auto}.contentTop{height:auto;display:grid;grid-template-columns:1fr}.select,.searchBtn{width:100%;height:30px}.listMeta{display:block}.gridNews,.footerTop{grid-template-columns:1fr}.bottom{display:block;padding:10px 18px}.bottom span{display:block;margin:6px 0}}
+/* === Reset & root === */
+:root{--blue:#003b86;--deep:#002a69;--primary:#0656d9;--light:#f5f8fd;--text:#10245b;--muted:#5d6a86;--line:#dce7f7;--footer:#002e72}
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:#f0f4fb;color:var(--text);font-size:14px}
+.page{width:100%;min-height:100vh;margin:0 auto;background:#f0f4fb}
+
+/* === Topbar === */
+.topbar{height:34px;background:#002d72;color:#fff;display:flex;align-items:center;justify-content:space-between;padding:0 42px;font-size:14px}
+.topbar .right{display:flex;gap:18px;align-items:center}
+.social{width:18px;height:18px;border-radius:50%;display:inline-grid;place-items:center;font-size:10px;font-weight:700;color:#fff}
+.fb{background:#087df4}.ms{background:#15a9ff}.yt{background:#e92525}
+
+/* === Navbar === */
+.navbar{height:68px;background:#fff;display:flex;align-items:center;padding:0 50px;border-bottom:1px solid #e6edf7;box-shadow:0 3px 12px rgba(11,39,82,.08);gap:18px}
+.brand{flex:0 0 248px;width:260px;display:flex;align-items:center;color:inherit;text-decoration:none}
+.brand img{display:block;width:238px;height:auto}
+.menu{flex:1;display:flex;align-items:center;justify-content:space-between;gap:24px;font-weight:700;color:#071a55;font-size:14px}
+.menu a{min-height:68px;display:flex;align-items:center;text-decoration:none;color:#071a55;position:relative;text-align:center;line-height:1.25}
+.menu .active{color:#0b61df}
+.menu .active:after{content:"";height:3px;background:#0d68ff;left:0;right:0;bottom:13px;position:absolute;border-radius:10px}
+.search-box{flex:0 0 176px;height:38px;display:flex;align-items:center;gap:8px;padding:0 12px;border:1px solid #dce5f2;border-radius:20px;background:#f8fbff}
+.search-box span{color:#07265e;font-size:22px;line-height:1}
+.search-box input{min-width:0;width:100%;border:0;outline:0;background:transparent;color:#071b47;font-size:12px}
+
+/* === Hero === */
+.hero{min-height:206px;background:linear-gradient(90deg,rgba(0,42,109,.98) 0%,rgba(0,60,142,.92) 50%,rgba(1,79,174,.70) 100%),url('../assets/images/banner_city.jpg') center/cover no-repeat;color:#fff;position:relative;overflow:hidden;padding:28px 58px}
+.hero:after{content:"";position:absolute;right:90px;bottom:0;width:430px;height:145px;background:repeating-linear-gradient(90deg,rgba(255,255,255,.09) 0 1px,transparent 1px 45px),repeating-linear-gradient(0deg,rgba(255,255,255,.08) 0 1px,transparent 1px 34px);clip-path:polygon(0 55%,10% 50%,16% 20%,25% 55%,36% 30%,49% 58%,55% 0,68% 62%,80% 26%,90% 59%,100% 46%,100% 100%,0 100%)}
+.crumb{font-size:13px;opacity:.9;margin-bottom:8px;position:relative;z-index:1}
+.hero h1{font-size:29px;line-height:1.26;margin:0 0 14px;font-weight:800;letter-spacing:.2px;position:relative;z-index:1}
+.hero p{font-size:15px;line-height:1.68;margin:0;width:470px;position:relative;z-index:1;color:#e8f2ff}
+
+/* === Footer === */
+.footer{margin-top:32px;background:#002e72;color:#dce8ff}
+.footerTop{width:calc(100% - 32px);margin:0 auto;display:grid;grid-template-columns:1.3fr .8fr .95fr 1.25fr 1.55fr;gap:28px;padding-top:17px;padding-bottom:12px}
+.fcol h4{margin:0 0 8px;font-size:12px;color:#fff}
+.fcol p,.fcol li{font-size:10.5px;line-height:1.65;margin:0;color:#d6e2fb}
+.fcol ul{list-style:none;padding:0;margin:0}
+.fSocial{display:flex;gap:13px;margin-top:9px}
+.fSocial span{width:15px;height:15px;border-radius:50%;display:grid;place-items:center;color:white;font-size:8px}
+.subForm{display:flex;margin-top:9px}
+.subForm input{height:30px;width:170px;border:0;padding:0 12px;font-size:11px}
+.subForm button{height:30px;width:68px;border:0;background:#0052c7;color:#fff;font-weight:700;font-size:11px}
+.bottom{min-height:33px;border-top:1px solid rgba(255,255,255,.12);display:flex;align-items:center;justify-content:center;gap:70px;font-size:10.5px;color:#d4e2ff;padding:0 58px}
+
+/* ===================== MAIN BODY ===================== */
+.main{
+  width:calc(100% - 32px);
+  max-width:1380px;
+  margin:24px auto 0;
+  display:grid;
+  grid-template-columns:234px minmax(0,1fr) 260px;
+  gap:20px;
+  align-items:start;
+}
+
+/* Shared card block */
+.sb-block{
+  background:#fff;
+  border-radius:12px;
+  border:1px solid #e4edf9;
+  overflow:hidden;
+  margin-bottom:16px;
+  box-shadow:0 2px 10px rgba(0,42,105,.06);
+}
+
+/* Sidebar header strip */
+.sb-header{
+  display:flex;align-items:center;gap:8px;
+  padding:12px 14px;
+  background:linear-gradient(90deg,#003d91,#0956d9);
+  color:#fff;font-weight:700;font-size:13px;
+}
+
+/* === LEFT SIDEBAR === */
+.cat-nav{padding:6px 0}
+
+.cat-item{
+  display:flex;align-items:center;gap:10px;
+  padding:9px 14px;
+  text-decoration:none;color:#1a2d60;
+  border-left:3px solid transparent;
+  transition:background .15s,border-color .15s;
+  cursor:pointer;
+}
+.cat-item:hover{background:#f0f6ff;border-left-color:#c0d8ff}
+.cat-item.active{background:#eef4ff;border-left-color:#0b5cdf}
+
+.cat-icon{width:28px;height:28px;border-radius:7px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.cat-name{flex:1;font-size:12px;font-weight:600}
+.cat-count{font-size:10px;font-weight:700;padding:2px 7px;border-radius:20px;background:#eef2fa;color:#3d5a9e}
+.cat-item.active .cat-count{background:#d6e6ff;color:#0043b8}
+
+.sb-section-label{
+  font-size:10px;font-weight:700;color:#6b7a9e;
+  letter-spacing:.6px;text-transform:uppercase;
+  padding:10px 14px 6px;border-top:1px solid #edf2fb;
+}
+
+.type-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:0 10px 12px}
+
+.type-chip{
+  display:flex;flex-direction:column;align-items:center;
+  padding:10px 6px;border:1px solid #e4edf9;border-radius:8px;
+  cursor:pointer;gap:4px;transition:all .15s;
+}
+.type-chip:hover{background:#f0f6ff;border-color:#b3d1f7;transform:translateY(-1px)}
+.tc-label{font-size:10px;font-weight:600;color:#273b70;text-align:center}
+.tc-count{font-size:12px;font-weight:700;color:#0b5cdf}
+
+.newsletter-box{padding:12px 14px 14px}
+.newsletter-box p{font-size:11px;line-height:1.55;color:#55698a;margin:0 0 9px}
+.newsletter-box input{
+  width:100%;height:32px;border:1px solid #d0dff0;border-radius:6px;
+  padding:0 10px;font-size:11px;color:#1a3060;outline:none;transition:border .15s;
+}
+.newsletter-box input:focus{border-color:#5498ff}
+.newsletter-box button{
+  margin-top:8px;width:100%;height:32px;border:none;
+  background:linear-gradient(90deg,#0040b0,#0656d9);
+  color:#fff;border-radius:6px;font-weight:700;font-size:12px;cursor:pointer;
+  transition:opacity .15s;
+}
+.newsletter-box button:hover{opacity:.88}
+
+/* === CONTENT AREA === */
+.content-area{min-width:0}
+
+.search-bar{
+  display:flex;height:40px;margin-bottom:14px;
+  border:1px solid #d4e2f5;border-radius:8px;overflow:hidden;
+  background:#fff;box-shadow:0 1px 5px rgba(0,42,105,.05);
+}
+.search-bar input{flex:1;border:none;padding:0 14px;font-size:12px;color:#1a3060;outline:none;background:transparent}
+.search-bar select{border:none;border-left:1px solid #e0eaf5;padding:0 10px;font-size:12px;color:#4a5d82;background:#f7faff;outline:none;width:155px}
+.search-bar button{width:88px;border:none;background:linear-gradient(90deg,#0040b0,#0656d9);color:#fff;font-weight:700;font-size:12px;cursor:pointer}
+
+.content-meta{display:flex;justify-content:space-between;align-items:center;font-size:11.5px;color:#4a5d82;margin-bottom:16px}
+.sort-wrap{display:flex;align-items:center;gap:6px}
+.sort-wrap select{border:1px solid #d4e2f5;padding:4px 10px;font-size:11px;border-radius:6px;color:#1a3060;background:#fff;outline:none}
+
+/* Featured card */
+.featured-card{
+  position:relative;border-radius:12px;overflow:hidden;
+  height:256px;margin-bottom:18px;
+  box-shadow:0 4px 20px rgba(0,42,105,.14);cursor:pointer;
+}
+.feat-img{width:100%;height:100%;background-size:cover;background-position:center;transition:transform .45s ease}
+.featured-card:hover .feat-img{transform:scale(1.04)}
+.feat-overlay{
+  position:absolute;inset:0;
+  background:linear-gradient(to top,rgba(0,8,35,.9) 35%,rgba(0,8,35,.05) 100%);
+  display:flex;flex-direction:column;justify-content:flex-end;
+  padding:20px 22px;
+}
+.feat-overlay h2{font-size:18px;font-weight:800;color:#fff;margin:0 0 10px;line-height:1.35}
+.feat-meta{display:flex;gap:18px;font-size:11px;color:rgba(255,255,255,.7);align-items:center}
+
+/* Badge */
+.badge-cat{
+  display:inline-block;padding:4px 11px;border-radius:5px;
+  font-size:10.5px;font-weight:700;margin-bottom:9px;
+}
+.badge-event{background:#0b5cdf;color:#fff}
+.badge-video{background:#d93a00;color:#fff}
+.badge-info{background:#007a45;color:#fff}
+.badge-photo{background:#d48a00;color:#fff}
+.badge-report{background:#1a2d60;color:#fff}
+.badge-story{background:#b84d00;color:#fff}
+
+/* News grid */
+.news-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:16px;align-items:start}
+.news-side{display:flex;flex-direction:column;gap:10px}
+.news-small{display:grid;grid-template-columns:80px 1fr;gap:10px;background:#fff;border-radius:10px;border:1px solid #e4edf9;padding:9px 11px;box-shadow:0 2px 6px rgba(0,42,105,.05);cursor:pointer;transition:box-shadow .2s,transform .2s;align-items:start}
+.news-small:hover{box-shadow:0 5px 16px rgba(0,42,105,.11);transform:translateY(-2px)}
+.nc-thumb-sm{height:58px;border-radius:7px;background-size:cover;background-position:center;position:relative;overflow:hidden}
+.news-small h4{font-size:12px;font-weight:600;line-height:1.4;color:#10245b;margin:0 0 6px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.news-big .nc-thumb{height:260px}
+
+.news-card{
+  background:#fff;border-radius:12px;
+  border:1px solid #e4edf9;overflow:hidden;
+  box-shadow:0 2px 8px rgba(0,42,105,.05);
+  transition:box-shadow .2s,transform .2s;cursor:pointer;
+}
+.news-card:hover{box-shadow:0 8px 24px rgba(0,42,105,.13);transform:translateY(-3px)}
+
+.nc-thumb{height:116px;position:relative;overflow:hidden;background-size:cover;background-position:center}
+
+.nc-badge{
+  position:absolute;top:8px;left:8px;
+  padding:3px 8px;border-radius:4px;font-size:9.5px;font-weight:700;
+}
+
+.play-overlay{
+  position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+  background:rgba(0,0,0,.2);
+}
+.play-overlay::after{
+  content:'▶';width:34px;height:34px;border-radius:50%;
+  background:rgba(255,255,255,.92);color:#0b55b9;
+  display:grid;place-items:center;font-size:13px;
+}
+
+.nc-body{padding:11px 13px 13px}
+.nc-body h3{
+  font-size:12.5px;font-weight:700;line-height:1.45;color:#10245b;
+  margin:0 0 9px;
+  display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;
+}
+.nc-meta{display:flex;gap:12px;font-size:10.5px;color:#7080a0}
+
+/* === RIGHT SIDEBAR === */
+.sidebar-right{display:flex;flex-direction:column;gap:0}
+
+.sb-title-row{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:12px 14px;border-bottom:1px solid #edf2f8;
+}
+.sb-title-row h3{font-size:13px;font-weight:800;color:#0b2a6e;margin:0}
+.sb-title-row a{font-size:11px;color:#0b5cdf;text-decoration:none;font-weight:600}
+
+.hot-list{padding:4px 14px 8px}
+.hot-item{
+  display:grid;grid-template-columns:56px 1fr;gap:10px;
+  padding:10px 0;border-bottom:1px solid #f0f4fb;align-items:start;
+}
+.hot-item:last-child{border-bottom:none}
+.hot-thumb{height:42px;border-radius:7px;background-size:cover;background-position:center;overflow:hidden}
+.hot-item h4{
+  font-size:11.5px;font-weight:600;line-height:1.4;color:#10245b;
+  margin:0 0 4px;
+  display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;
+}
+.hot-item time{font-size:10px;color:#7a8aaa}
+
+.event-list{padding:8px 14px 14px}
+.event-item{display:grid;grid-template-columns:44px 1fr;gap:10px;margin-bottom:12px;align-items:start}
+.event-item:last-child{margin-bottom:0}
+
+.event-date{
+  width:44px;height:44px;border-radius:9px;
+  background:linear-gradient(135deg,#003d91,#0656d9);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;flex-shrink:0;
+}
+.event-date .day{font-size:16px;font-weight:800;color:#fff;line-height:1}
+.event-date .month{font-size:9px;font-weight:600;color:rgba(255,255,255,.72);letter-spacing:.4px;margin-top:1px}
+
+.event-item b{font-size:11.5px;font-weight:600;line-height:1.4;color:#10245b;display:block;margin-bottom:3px}
+.event-item span{font-size:10px;color:#7a8aaa}
+
+/* === RESPONSIVE === */
+@media(max-width:1100px){
+  .main{width:calc(100% - 24px);grid-template-columns:1fr}
+  .news-grid{grid-template-columns:1fr 1fr}
+  .footerTop{width:calc(100% - 24px);grid-template-columns:1fr 1fr}
+  .menu{gap:16px;font-size:12px}
+  .topbar,.navbar{padding-left:28px;padding-right:28px}
+  .hero{padding-left:36px}
+}
+@media(max-width:680px){
+  .topbar{height:auto;min-height:34px;padding:8px 18px;gap:10px;flex-wrap:wrap}
+  .topbar .right{gap:10px;flex-wrap:wrap}
+  .navbar{height:auto;min-height:68px;flex-wrap:wrap;padding:10px 18px}
+  .brand{width:auto;flex:1}
+  .brand img{width:190px}
+  .menu{order:4;width:100%;display:grid;grid-template-columns:1fr;align-items:stretch}
+  .menu a{min-height:0;padding:10px 0}
+  .search-box{order:3;flex:1 1 100%}
+  .hero p{width:auto}
+  .search-bar{height:auto;flex-direction:column}
+  .search-bar input,.search-bar select,.search-bar button{width:100%;height:36px}
+  .content-meta{display:block}
+  .news-grid,.footerTop{grid-template-columns:1fr}
+  .bottom{display:block;padding:10px 18px}
+  .bottom span{display:block;margin:6px 0}
+}
 </style>
 </head>
 <body>
 <div class="page">
-  <div class="topbar"><div class="left">VI&nbsp;&nbsp;|&nbsp;&nbsp;EN</div><div class="right"><span>Powered by M-SCI Labs</span><span>☎&nbsp; 1900 6868</span><span>✉ hotro@bac.gov.vn</span><span class="social fb">f</span><span class="social ms">m</span><span class="social yt">▶</span></div></div>
-  <header class="navbar"><a class="brand" href="../index.html"><img src="../assets/images/logo%201.png" alt="BAC - The Business Assistance Center" /></a><nav class="menu"><a href="../index.html">Trang chủ</a><a href="gioi-thieu.html">Giới thiệu</a><a href="dich-vu-phat-trien.html">Dịch vụ & phát triển</a><a href="du-lieu-so.html">Dữ liệu số</a><a class="active" href="tin-tuc-su-kien.html">Tin tức và sự kiện</a><a href="van-ban-quy-pham-phap-luat.html">Văn bản quy phạm pháp luật</a><a href="hop-tac.html">Hợp tác</a></nav><form class="search-box" role="search"><span aria-hidden="true">⌕</span><input type="search" name="keyword" aria-label="Tìm kiếm" placeholder="Tìm kiếm" /></form></header>
-  <section class="hero"><div class="crumb">Trang chủ &nbsp;›&nbsp; Tin tức sự kiện</div><h1>Tin tức và sự kiện</h1><p>Cập nhật thông tin hoạt động của BAC và đối tác đồng hành cùng cộng đồng doanh nghiệp.</p></section>
+
+  <!-- TOPBAR -->
+  <div class="topbar">
+    <div class="left">VI&nbsp;&nbsp;|&nbsp;&nbsp;EN</div>
+    <div class="right">
+      <span>Powered by M-SCI Labs</span>
+      <span>☎&nbsp; 1900 6868</span>
+      <span>✉ hotro@bac.gov.vn</span>
+      <span class="social fb">f</span>
+      <span class="social ms">m</span>
+      <span class="social yt">▶</span>
+    </div>
+  </div>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <a class="brand" href="../index.html"><img src="../assets/images/logo%201.png" alt="BAC - The Business Assistance Center" /></a>
+    <nav class="menu">
+      <a href="../index.html">Trang chủ</a>
+      <a href="gioi-thieu.html">Giới thiệu</a>
+      <a href="dich-vu-phat-trien.html">Dịch vụ &amp; phát triển</a>
+      <a href="du-lieu-so.html">Dữ liệu số</a>
+      <a class="active" href="tin-tuc-su-kien.html">Tin tức và sự kiện</a>
+      <a href="van-ban-quy-pham-phap-luat.html">Văn bản quy phạm pháp luật</a>
+      <a href="hop-tac.html">Hợp tác</a>
+    </nav>
+    <form class="search-box" role="search">
+      <span aria-hidden="true">⌕</span>
+      <input type="search" name="keyword" aria-label="Tìm kiếm" placeholder="Tìm kiếm" />
+    </form>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="crumb">Trang chủ &nbsp;›&nbsp; Tin tức sự kiện</div>
+    <h1>Tin tức và sự kiện</h1>
+    <p>Cập nhật thông tin hoạt động của BAC và đối tác đồng hành cùng cộng đồng doanh nghiệp.</p>
+  </section>
+
+  <!-- MAIN BODY -->
   <main class="main">
-    <aside class="card"><div class="sideTitle">Danh mục tin tức</div><div class="category"><div class="catRow"><span><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg></span><b>Tất cả</b><em>156</em></div><div class="catRow"><span><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"/><path d="M18 14h-8"/><path d="M15 18h-5"/><path d="M10 6h8v4h-8V6Z"/></svg></span><b>Tin tức BAC</b><em>62</em></div><div class="catRow"><span><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg></span><b>Hoạt động hỗ trợ doanh nghiệp</b><em>28</em></div><div class="catRow"><span><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></span><b>Sự kiện</b><em>22</em></div><div class="catRow"><span><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></span><b>Chính sách - Văn bản</b><em>18</em></div><div class="catRow"><span><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span><b>Đổi mới và hợp tác</b><em>16</em></div><div class="catRow"><span><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span><b>Câu chuyện doanh nghiệp</b><em>10</em></div></div><div class="boxTitle">Loại nội dung</div><div class="category"><div class="typeRow"><span><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></span><b>Tin văn bản</b><em>92</em></div><div class="typeRow"><span><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg></span><b>Video</b><em>28</em></div><div class="typeRow"><span><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/><line x1="2" y1="20" x2="22" y2="20"/></svg></span><b>Infographic</b><em>16</em></div><div class="typeRow"><span><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></span><b>Hình ảnh</b><em>20</em></div></div><div class="boxTitle">Bản tin BAC</div><div class="newsletterSmall"><p>Đăng ký nhận tin để cập nhật<br>thông tin mới nhất từ BAC.</p><input placeholder="Nhập email của bạn..."><button>Đăng ký</button></div></aside>
-    <section><div class="contentTop"><input class="searchInput" placeholder="Tìm kiếm tin tức, sự kiện..."><div class="select">Tất cả danh mục <span>⌄</span></div><button class="searchBtn">Tìm kiếm</button></div><div class="listMeta"><span>Hiển thị 1-10 trong tổng số 156 tin</span><div class="sort"><span>Sắp xếp:</span><div class="sortBox">Mới nhất⌄</div></div></div><article class="featured"><div class="featImg" style="background:linear-gradient(to bottom right,rgba(0,20,60,.45),rgba(0,10,40,.55)),url('https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&q=80') center/cover no-repeat"></div><div class="featText"><span class="badge">Sự kiện</span><h2>BAC tổ chức Diễn đàn hỗ trợ doanh nghiệp chuyển đổi số và đổi mới sáng tạo 2025</h2><p>Diễn đàn là cầu nối quan trọng trong hành trình chuyển đổi doanh nghiệp, thúc đẩy chuyển đổi số, đổi mới sáng tạo và nâng cao năng lực cạnh tranh.</p><div class="postInfo"><span><svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:2px"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>15/05/2025</span><span><svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:2px"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>1245 lượt xem</span></div></div></article><div class="gridNews"><article class="newsCard"><div class=”thumb video” style=”background:linear-gradient(rgba(0,20,60,.35),rgba(0,10,40,.45)),url('https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=300&q=80') center/cover no-repeat”></div><h3>Hội thảo “Nâng cao năng lực quản trị tài chính cho doanh nghiệp nhỏ và vừa”</h3><div class="miniMeta"><span><svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:2px"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>12/05/2025</span><span><svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:2px"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>856 lượt xem</span></div></article><article class="newsCard"><div class="thumb info" style="background:url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=300&q=80') center/cover no-repeat"></div><h3>Infographic: Lộ trình chuyển đổi số cho doanh nghiệp nhỏ và vừa</h3><div class="miniMeta"><span><svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:2px"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>10/05/2025</span><span><svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:2px"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>1102 lượt xem</span></div></article><article class="newsCard"><div class="thumb bars" style="background:linear-gradient(rgba(5,30,80,.3),rgba(5,30,80,.25)),url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=300&q=80') center/cover no-repeat"></div><h3>Báo cáo: Tình hình phát triển doanh nghiệp tháng 04/2025</h3><div class="miniMeta"><span><svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:2px"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>09/05/2025</span><span><svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:2px"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>612 lượt xem</span></div></article><article class="newsCard"><div class="thumb group" style="background:linear-gradient(rgba(3,40,100,.25),rgba(3,40,100,.2)),url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=300&q=80') center/cover no-repeat"></div><h3>Một số hình ảnh Diễn đàn kết nối cung cầu công nghệ 2025</h3><div class="miniMeta"><span><svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:2px"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>07/05/2025</span><span><svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:2px"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>543 lượt xem</span></div></article><article class="newsCard"><div class="thumb" style="background:url('https://images.unsplash.com/photo-1559526324-4b87b5e36e44?w=300&q=80') center/cover no-repeat"></div><h3>Chương trình hỗ trợ tiếp cận tín dụng cho DNNVV năm 2025 chính thức triển khai</h3><div class="miniMeta"><span><svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:2px"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>05/05/2025</span><span><svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:2px"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>724 lượt xem</span></div></article><article class="newsCard"><div class="thumb" style="background:url('https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=300&q=80') center/cover no-repeat"></div><h3>Câu chuyện doanh nghiệp: Hành trình chuyển đổi số thành công của Công ty TNHH Phương Nam</h3><div class="miniMeta"><span><svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:2px"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>03/05/2025</span><span><svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:2px"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>489 lượt xem</span></div></article><article class="newsCard"><div class="thumb" style="background:url('https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=300&q=80') center/cover no-repeat"></div><h3>BAC mở rộng mạng lưới tư vấn viên tại 10 tỉnh, thành phố phía Nam</h3><div class="miniMeta"><span><svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:2px"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>01/05/2025</span><span><svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:2px"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>311 lượt xem</span></div></article><article class="newsCard"><div class="thumb" style="background:url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=300&q=80') center/cover no-repeat"></div><h3>Đào tạo kỹ năng số cho hơn 500 doanh nghiệp nhỏ và vừa trong quý II/2025</h3><div class="miniMeta"><span><svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:2px"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>28/04/2025</span><span><svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:2px"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>678 lượt xem</span></div></article><article class="newsCard"><div class="thumb" style="background:url('https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=300&q=80') center/cover no-repeat"></div><h3>Hợp tác xã ứng dụng công nghệ: Mô hình phát triển bền vững tại Đồng bằng sông Cửu Long</h3><div class="miniMeta"><span><svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:2px"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>25/04/2025</span><span><svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:2px"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>402 lượt xem</span></div></article></div></section>
-    <aside class="card rightPanel"><div class="rightInner"><h3 class="rpTitle">Tin nổi bật</h3><div class="hotItem"><div class="hotThumb" style="background:url('https://images.unsplash.com/photo-1521791136064-7986c2920216?w=120&q=80') center/cover no-repeat"></div><div><h4>BAC và UCCI ký kết thỏa thuận hợp tác hỗ trợ doanh nghiệp</h4><time>10/05/2025</time></div></div><div class="hotItem"><div class="hotThumb" style="background:url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=120&q=80') center/cover no-repeat"></div><div><h4>Chính sách mới về hỗ trợ DNNV có hiệu lực từ 01/06/2025</h4><time>08/05/2025</time></div></div><div class="hotItem"><div class="hotThumb" style="background:url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=120&q=80') center/cover no-repeat"></div><div><h4>Tọa đàm: Giải pháp cần vốn hiệu quả cho doanh nghiệp nhỏ và vừa</h4><time>05/05/2025</time></div></div><div class="hotItem"><div class="hotThumb" style="background:url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=120&q=80') center/cover no-repeat"></div><div><h4>Infographic: 10 con số nổi bật về hỗ trợ doanh nghiệp 2024</h4><time>02/05/2025</time></div></div><div class="eventsHeader"><h3 class="rpTitle">Sự kiện sắp diễn ra</h3><a>Xem tất cả →</a></div><div class="event"><div class="cal"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><polyline points="9 16 11 18 15 14"/></svg></div><div><b>Hội thảo: Chiến lược thương hiệu trong thời đại số</b><span>22/05/2025 - Hà Nội</span></div></div><div class="event"><div class="cal"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><polyline points="9 16 11 18 15 14"/></svg></div><div><b>Kết nối cung cầu công nghệ và đổi mới sáng tạo</b><span>29/05/2025 - TP. Hồ Chí Minh</span></div></div><div class="event"><div class="cal"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><polyline points="9 16 11 18 15 14"/></svg></div><div><b>Khóa đào tạo: Quản trị nhân sự hiệu quả cho DNNV</b><span>05/06/2025 - Đà Nẵng</span></div></div></div></aside>
+
+    <!-- LEFT SIDEBAR -->
+    <aside>
+      <div class="sb-block">
+        <div class="sb-header">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+          Danh mục tin tức
+        </div>
+        <nav class="cat-nav">
+          <a class="cat-item active" href="#">
+            <span class="cat-icon" style="background:#e8f0fe"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0b5cdf" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg></span>
+            <span class="cat-name">Tất cả</span>
+            <span class="cat-count">156</span>
+          </a>
+          <a class="cat-item" href="#">
+            <span class="cat-icon" style="background:#e8f4ee"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#007a45" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"/><path d="M18 14h-8"/><path d="M15 18h-5"/><path d="M10 6h8v4h-8V6Z"/></svg></span>
+            <span class="cat-name">Tin tức BAC</span>
+            <span class="cat-count">62</span>
+          </a>
+          <a class="cat-item" href="#">
+            <span class="cat-icon" style="background:#fef3e2"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#c67800" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg></span>
+            <span class="cat-name">Hoạt động hỗ trợ DN</span>
+            <span class="cat-count">28</span>
+          </a>
+          <a class="cat-item" href="#">
+            <span class="cat-icon" style="background:#f2edfe"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#6a35d0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></span>
+            <span class="cat-name">Sự kiện</span>
+            <span class="cat-count">22</span>
+          </a>
+          <a class="cat-item" href="#">
+            <span class="cat-icon" style="background:#fde8f0"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#b5004a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></span>
+            <span class="cat-name">Chính sách - Văn bản</span>
+            <span class="cat-count">18</span>
+          </a>
+          <a class="cat-item" href="#">
+            <span class="cat-icon" style="background:#e1f6f6"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#007a7a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span>
+            <span class="cat-name">Đổi mới và hợp tác</span>
+            <span class="cat-count">16</span>
+          </a>
+          <a class="cat-item" href="#">
+            <span class="cat-icon" style="background:#fff0e6"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#b84d00" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>
+            <span class="cat-name">Câu chuyện doanh nghiệp</span>
+            <span class="cat-count">10</span>
+          </a>
+        </nav>
+        <div class="sb-section-label">Loại nội dung</div>
+        <div class="type-grid">
+          <div class="type-chip">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3a6fd8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            <span class="tc-label">Tin văn bản</span><b class="tc-count">92</b>
+          </div>
+          <div class="type-chip">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#e92525" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+            <span class="tc-label">Video</span><b class="tc-count">28</b>
+          </div>
+          <div class="type-chip">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#009c5a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/><line x1="2" y1="20" x2="22" y2="20"/></svg>
+            <span class="tc-label">Infographic</span><b class="tc-count">16</b>
+          </div>
+          <div class="type-chip">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#7441e6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+            <span class="tc-label">Hình ảnh</span><b class="tc-count">20</b>
+          </div>
+        </div>
+      </div>
+
+      <div class="sb-block">
+        <div class="sb-header">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          Bản tin BAC
+        </div>
+        <div class="newsletter-box">
+          <p>Đăng ký nhận tin để cập nhật thông tin mới nhất từ BAC.</p>
+          <input placeholder="Nhập email của bạn...">
+          <button>Đăng ký ngay</button>
+        </div>
+      </div>
+    </aside>
+
+    <!-- CONTENT AREA -->
+    <section class="content-area">
+      <div class="search-bar">
+        <input placeholder="Tìm kiếm tin tức, sự kiện...">
+        <select>
+          <option>Tất cả danh mục</option>
+          <option>Tin tức BAC</option>
+          <option>Sự kiện</option>
+          <option>Hoạt động hỗ trợ DN</option>
+        </select>
+        <button>Tìm kiếm</button>
+      </div>
+
+      <div class="content-meta">
+        <span>Hiển thị <b>1–7</b> trong tổng số <b>156</b> tin</span>
+        <div class="sort-wrap">
+          Sắp xếp:
+          <select><option>Mới nhất</option><option>Xem nhiều nhất</option><option>Cũ nhất</option></select>
+        </div>
+      </div>
+
+      <!-- Featured -->
+      <article class="featured-card">
+        <div class="feat-img" style="background:url('https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=900&q=80') center/cover no-repeat"></div>
+        <div class="feat-overlay">
+          <span class="badge-cat badge-event">Sự kiện</span>
+          <h2>BAC tổ chức Diễn đàn hỗ trợ doanh nghiệp chuyển đổi số và đổi mới sáng tạo 2025</h2>
+          <div class="feat-meta">
+            <span><svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:3px"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>15/05/2025</span>
+            <span><svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:3px"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>1.245 lượt xem</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- News grid: big card (left) + small list (right) -->
+      <div class="news-grid">
+
+        <!-- 1 tin to bên trái -->
+        <article class="news-card news-big">
+          <div class="nc-thumb" style="background:url('https://images.unsplash.com/photo-1559526324-4b87b5e36e44?w=700&q=80') center/cover no-repeat">
+            <span class="nc-badge badge-event">Tin BAC</span>
+          </div>
+          <div class="nc-body">
+            <h3 style="font-size:15px;line-height:1.4;margin-bottom:10px">Chương trình hỗ trợ tiếp cận tín dụng cho doanh nghiệp nhỏ và vừa năm 2025 chính thức triển khai trên toàn quốc</h3>
+            <p style="font-size:12px;line-height:1.65;color:#3d5070;margin:0 0 12px">Bộ Kế hoạch và Đầu tư phối hợp cùng BAC chính thức phát động chương trình hỗ trợ tiếp cận nguồn vốn tín dụng ưu đãi dành cho các doanh nghiệp nhỏ và vừa trong cả nước, với tổng ngân sách lên đến 5.000 tỷ đồng.</p>
+            <div class="nc-meta"><span>05/05/2025</span><span>724 lượt xem</span></div>
+          </div>
+        </article>
+
+        <!-- 5 tin nhỏ bên phải -->
+        <div class="news-side">
+          <article class="news-small">
+            <div class="nc-thumb-sm" style="background:url('https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=200&q=80') center/cover no-repeat">
+              <div class="play-overlay"></div>
+            </div>
+            <div>
+              <span class="nc-badge badge-video" style="position:static;margin-bottom:5px;display:inline-block">Video</span>
+              <h4>Hội thảo "Nâng cao năng lực quản trị tài chính cho doanh nghiệp nhỏ và vừa"</h4>
+              <div class="nc-meta"><span>12/05/2025</span><span>856 lượt xem</span></div>
+            </div>
+          </article>
+
+          <article class="news-small">
+            <div class="nc-thumb-sm" style="background:url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=200&q=80') center/cover no-repeat"></div>
+            <div>
+              <span class="nc-badge badge-info" style="position:static;margin-bottom:5px;display:inline-block">Infographic</span>
+              <h4>Infographic: Lộ trình chuyển đổi số cho doanh nghiệp nhỏ và vừa</h4>
+              <div class="nc-meta"><span>10/05/2025</span><span>1.102 lượt xem</span></div>
+            </div>
+          </article>
+
+          <article class="news-small">
+            <div class="nc-thumb-sm" style="background:url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=200&q=80') center/cover no-repeat"></div>
+            <div>
+              <span class="nc-badge badge-report" style="position:static;margin-bottom:5px;display:inline-block">Báo cáo</span>
+              <h4>Báo cáo: Tình hình phát triển doanh nghiệp tháng 04/2025</h4>
+              <div class="nc-meta"><span>09/05/2025</span><span>612 lượt xem</span></div>
+            </div>
+          </article>
+
+          <article class="news-small">
+            <div class="nc-thumb-sm" style="background:url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=200&q=80') center/cover no-repeat"></div>
+            <div>
+              <span class="nc-badge badge-photo" style="position:static;margin-bottom:5px;display:inline-block">Hình ảnh</span>
+              <h4>Một số hình ảnh Diễn đàn kết nối cung cầu công nghệ 2025</h4>
+              <div class="nc-meta"><span>07/05/2025</span><span>543 lượt xem</span></div>
+            </div>
+          </article>
+
+          <article class="news-small">
+            <div class="nc-thumb-sm" style="background:url('https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=200&q=80') center/cover no-repeat"></div>
+            <div>
+              <span class="nc-badge badge-story" style="position:static;margin-bottom:5px;display:inline-block">Câu chuyện</span>
+              <h4>Hành trình chuyển đổi số thành công của Công ty TNHH Phương Nam</h4>
+              <div class="nc-meta"><span>03/05/2025</span><span>489 lượt xem</span></div>
+            </div>
+          </article>
+        </div>
+
+
+      </div>
+    </section>
+
+    <!-- RIGHT SIDEBAR -->
+    <aside class="sidebar-right">
+      <div class="sb-block">
+        <div class="sb-title-row"><h3>Tin nổi bật</h3></div>
+        <div class="hot-list">
+          <div class="hot-item">
+            <div class="hot-thumb" style="background:url('https://images.unsplash.com/photo-1521791136064-7986c2920216?w=120&q=80') center/cover no-repeat"></div>
+            <div><h4>BAC và UCCI ký kết thỏa thuận hợp tác hỗ trợ doanh nghiệp</h4><time>10/05/2025</time></div>
+          </div>
+          <div class="hot-item">
+            <div class="hot-thumb" style="background:url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=120&q=80') center/cover no-repeat"></div>
+            <div><h4>Chính sách mới về hỗ trợ DNNVV có hiệu lực từ 01/06/2025</h4><time>08/05/2025</time></div>
+          </div>
+          <div class="hot-item">
+            <div class="hot-thumb" style="background:url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=120&q=80') center/cover no-repeat"></div>
+            <div><h4>Tọa đàm: Giải pháp cần vốn hiệu quả cho doanh nghiệp nhỏ và vừa</h4><time>05/05/2025</time></div>
+          </div>
+          <div class="hot-item">
+            <div class="hot-thumb" style="background:url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=120&q=80') center/cover no-repeat"></div>
+            <div><h4>Infographic: 10 con số nổi bật về hỗ trợ doanh nghiệp 2024</h4><time>02/05/2025</time></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sb-block">
+        <div class="sb-title-row">
+          <h3>Sự kiện sắp diễn ra</h3>
+          <a href="#">Xem tất cả →</a>
+        </div>
+        <div class="event-list">
+          <div class="event-item">
+            <div class="event-date"><span class="day">22</span><span class="month">05/25</span></div>
+            <div><b>Hội thảo: Chiến lược thương hiệu trong thời đại số</b><span>📍 Hà Nội</span></div>
+          </div>
+          <div class="event-item">
+            <div class="event-date"><span class="day">29</span><span class="month">05/25</span></div>
+            <div><b>Kết nối cung cầu công nghệ và đổi mới sáng tạo</b><span>📍 TP. Hồ Chí Minh</span></div>
+          </div>
+          <div class="event-item">
+            <div class="event-date"><span class="day">05</span><span class="month">06/25</span></div>
+            <div><b>Khóa đào tạo: Quản trị nhân sự hiệu quả cho DNNVV</b><span>📍 Đà Nẵng</span></div>
+          </div>
+        </div>
+      </div>
+    </aside>
+
   </main>
-  <footer class="footer"><div class="footerTop"><div class="fcol"><h4>Về BAC</h4><p>BAC là đơn vị thuộc Cục Phát triển doanh nghiệp - Bộ Kế hoạch và Đầu tư, thực hiện chức năng hỗ trợ doanh nghiệp nhỏ và vừa, hợp tác xã và hộ kinh doanh trên phạm vi toàn quốc.</p><div class="fSocial"><span class="fb">f</span><span class="ms">m</span><span class="yt">▶</span></div></div><div class="fcol"><h4>Dịch vụ</h4><ul><li>Đào tạo DNNV</li><li>Tư vấn DNNV</li><li>Tư vấn quỹ hỗ trợ</li><li>Dịch vụ GTGT</li></ul></div><div class="fcol"><h4>Liên kết nhanh</h4><ul><li>Trang chủ</li><li>Giới thiệu</li><li>Dịch vụ phát triển</li><li>Dữ liệu số</li><li>Tin tức và sự kiện</li><li>Văn bản quy phạm pháp luật</li></ul></div><div class="fcol"><h4>Thông tin liên hệ</h4><ul><li>⌖ Tầng 10, Tòa nhà BAC<br>&nbsp;&nbsp;&nbsp;123 Trần Duy Hưng, Cầu Giấy, Hà Nội</li><li>☏ 1900 6868</li><li>✉ hotro@bac.gov.vn</li><li>◴ Thứ 2 - Thứ 6: 8:00 - 17:30</li></ul></div><div class="fcol"><h4>Đăng ký nhận thông tin</h4><p>Nhận bản tin, thông tin chính sách và chương trình hỗ trợ mới nhất từ BAC.</p><div class="subForm"><input placeholder="Nhập email của bạn..."><button>Đăng ký</button></div></div></div><div class="bottom"><span>© 2026 BAC - Trung tâm Hỗ trợ Doanh nghiệp nhỏ và vừa, Hợp tác xã và Hộ kinh doanh. Mọi quyền được bảo lưu.</span><span>Chính sách bảo mật | Điều khoản sử dụng | Sitemap</span></div></footer>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footerTop">
+      <div class="fcol"><h4>Về BAC</h4><p>BAC là đơn vị thuộc Cục Phát triển doanh nghiệp - Bộ Kế hoạch và Đầu tư, thực hiện chức năng hỗ trợ doanh nghiệp nhỏ và vừa, hợp tác xã và hộ kinh doanh trên phạm vi toàn quốc.</p><div class="fSocial"><span class="fb">f</span><span class="ms">m</span><span class="yt">▶</span></div></div>
+      <div class="fcol"><h4>Dịch vụ</h4><ul><li>Đào tạo DNNV</li><li>Tư vấn DNNV</li><li>Tư vấn quỹ hỗ trợ</li><li>Dịch vụ GTGT</li></ul></div>
+      <div class="fcol"><h4>Liên kết nhanh</h4><ul><li>Trang chủ</li><li>Giới thiệu</li><li>Dịch vụ phát triển</li><li>Dữ liệu số</li><li>Tin tức và sự kiện</li><li>Văn bản quy phạm pháp luật</li></ul></div>
+      <div class="fcol"><h4>Thông tin liên hệ</h4><ul><li>⌖ Tầng 10, Tòa nhà BAC<br>&nbsp;&nbsp;&nbsp;123 Trần Duy Hưng, Cầu Giấy, Hà Nội</li><li>☏ 1900 6868</li><li>✉ hotro@bac.gov.vn</li><li>◴ Thứ 2 - Thứ 6: 8:00 - 17:30</li></ul></div>
+      <div class="fcol"><h4>Đăng ký nhận thông tin</h4><p>Nhận bản tin, thông tin chính sách và chương trình hỗ trợ mới nhất từ BAC.</p><div class="subForm"><input placeholder="Nhập email của bạn..."><button>Đăng ký</button></div></div>
+    </div>
+    <div class="bottom"><span>© 2026 BAC - Trung tâm Hỗ trợ Doanh nghiệp nhỏ và vừa, Hợp tác xã và Hộ kinh doanh. Mọi quyền được bảo lưu.</span><span>Chính sách bảo mật | Điều khoản sử dụng | Sitemap | <a href="../admin.html" style="color:#8ab4f8;text-decoration:none;font-weight:600">Quản trị</a></span></div>
+  </footer>
+
 </div>
 </body>
 </html>
-
-
